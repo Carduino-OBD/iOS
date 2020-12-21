@@ -1,13 +1,13 @@
 //
-//  Carduino_iOSUITests.swift
-//  Carduino iOSUITests
+//  Tests_iOS.swift
+//  Tests iOS
 //
-//  Created by Alex Taffe on 12/18/20.
+//  Created by Alex Taffe on 12/20/20.
 //
 
 import XCTest
 
-class Carduino_iOSUITests: XCTestCase {
+class Tests_iOS: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

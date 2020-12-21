@@ -7,62 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A60E1A07258DA43800912F4F /* Carduino_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E1A06258DA43800912F4F /* Carduino_iOSApp.swift */; };
-		A60E1A09258DA43800912F4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E1A08258DA43800912F4F /* ContentView.swift */; };
-		A60E1A0B258DA43900912F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60E1A0A258DA43900912F4F /* Assets.xcassets */; };
-		A60E1A0E258DA43900912F4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60E1A0D258DA43900912F4F /* Preview Assets.xcassets */; };
-		A60E1A19258DA43A00912F4F /* Carduino_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E1A18258DA43A00912F4F /* Carduino_iOSTests.swift */; };
-		A60E1A24258DA43A00912F4F /* Carduino_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E1A23258DA43A00912F4F /* Carduino_iOSUITests.swift */; };
+		A65E9AA325903A31001CF607 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9AA225903A31001CF607 /* Tests_iOS.swift */; };
+		A65E9AAE25903A31001CF607 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9AAD25903A31001CF607 /* Tests_macOS.swift */; };
+		A65E9AB025903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8425903A2F001CF607 /* Carduino_iOS.xcdatamodeld */; };
+		A65E9AB125903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8425903A2F001CF607 /* Carduino_iOS.xcdatamodeld */; };
+		A65E9AB225903A31001CF607 /* Carduino_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8625903A2F001CF607 /* Carduino_iOSApp.swift */; };
+		A65E9AB325903A31001CF607 /* Carduino_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8625903A2F001CF607 /* Carduino_iOSApp.swift */; };
+		A65E9AB425903A31001CF607 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8725903A2F001CF607 /* ContentView.swift */; };
+		A65E9AB525903A31001CF607 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8725903A2F001CF607 /* ContentView.swift */; };
+		A65E9AB625903A31001CF607 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8825903A2F001CF607 /* Persistence.swift */; };
+		A65E9AB725903A31001CF607 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8825903A2F001CF607 /* Persistence.swift */; };
+		A65E9AB825903A31001CF607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65E9A8925903A31001CF607 /* Assets.xcassets */; };
+		A65E9AB925903A31001CF607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65E9A8925903A31001CF607 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A60E1A15258DA43A00912F4F /* PBXContainerItemProxy */ = {
+		A65E9A9F25903A31001CF607 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A60E19FB258DA43800912F4F /* Project object */;
+			containerPortal = A65E9A7F25903A2E001CF607 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A60E1A02258DA43800912F4F;
-			remoteInfo = "Carduino iOS";
+			remoteGlobalIDString = A65E9A8D25903A31001CF607;
+			remoteInfo = "Carduino iOS (iOS)";
 		};
-		A60E1A20258DA43A00912F4F /* PBXContainerItemProxy */ = {
+		A65E9AAA25903A31001CF607 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A60E19FB258DA43800912F4F /* Project object */;
+			containerPortal = A65E9A7F25903A2E001CF607 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A60E1A02258DA43800912F4F;
-			remoteInfo = "Carduino iOS";
+			remoteGlobalIDString = A65E9A9525903A31001CF607;
+			remoteInfo = "Carduino iOS (macOS)";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A60E1A03258DA43800912F4F /* Carduino iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carduino iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A60E1A06258DA43800912F4F /* Carduino_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carduino_iOSApp.swift; sourceTree = "<group>"; };
-		A60E1A08258DA43800912F4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A60E1A0A258DA43900912F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A60E1A0D258DA43900912F4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A60E1A0F258DA43900912F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A60E1A14258DA43A00912F4F /* Carduino iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Carduino iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A60E1A18258DA43A00912F4F /* Carduino_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carduino_iOSTests.swift; sourceTree = "<group>"; };
-		A60E1A1A258DA43A00912F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A60E1A1F258DA43A00912F4F /* Carduino iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Carduino iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A60E1A23258DA43A00912F4F /* Carduino_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carduino_iOSUITests.swift; sourceTree = "<group>"; };
-		A60E1A25258DA43A00912F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65E9A8525903A2F001CF607 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		A65E9A8625903A2F001CF607 /* Carduino_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carduino_iOSApp.swift; sourceTree = "<group>"; };
+		A65E9A8725903A2F001CF607 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A65E9A8825903A2F001CF607 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A65E9A8925903A31001CF607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A65E9A8E25903A31001CF607 /* Carduino iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carduino iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65E9A9125903A31001CF607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65E9A9625903A31001CF607 /* Carduino iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carduino iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65E9A9825903A31001CF607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65E9A9925903A31001CF607 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		A65E9A9E25903A31001CF607 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65E9AA225903A31001CF607 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		A65E9AA425903A31001CF607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65E9AA925903A31001CF607 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65E9AAD25903A31001CF607 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		A65E9AAF25903A31001CF607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A60E1A00258DA43800912F4F /* Frameworks */ = {
+		A65E9A8B25903A31001CF607 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A60E1A11258DA43A00912F4F /* Frameworks */ = {
+		A65E9A9325903A31001CF607 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A60E1A1C258DA43A00912F4F /* Frameworks */ = {
+		A65E9A9B25903A31001CF607 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E9AA625903A31001CF607 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,143 +89,175 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A60E19FA258DA43800912F4F = {
+		A65E9A7E25903A2E001CF607 = {
 			isa = PBXGroup;
 			children = (
-				A60E1A05258DA43800912F4F /* Carduino iOS */,
-				A60E1A17258DA43A00912F4F /* Carduino iOSTests */,
-				A60E1A22258DA43A00912F4F /* Carduino iOSUITests */,
-				A60E1A04258DA43800912F4F /* Products */,
+				A65E9A8325903A2F001CF607 /* Shared */,
+				A65E9A9025903A31001CF607 /* iOS */,
+				A65E9A9725903A31001CF607 /* macOS */,
+				A65E9AA125903A31001CF607 /* Tests iOS */,
+				A65E9AAC25903A31001CF607 /* Tests macOS */,
+				A65E9A8F25903A31001CF607 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A60E1A04258DA43800912F4F /* Products */ = {
+		A65E9A8325903A2F001CF607 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A60E1A03258DA43800912F4F /* Carduino iOS.app */,
-				A60E1A14258DA43A00912F4F /* Carduino iOSTests.xctest */,
-				A60E1A1F258DA43A00912F4F /* Carduino iOSUITests.xctest */,
+				A65E9A8625903A2F001CF607 /* Carduino_iOSApp.swift */,
+				A65E9A8725903A2F001CF607 /* ContentView.swift */,
+				A65E9A8825903A2F001CF607 /* Persistence.swift */,
+				A65E9A8925903A31001CF607 /* Assets.xcassets */,
+				A65E9A8425903A2F001CF607 /* Carduino_iOS.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A65E9A8F25903A31001CF607 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A65E9A8E25903A31001CF607 /* Carduino iOS.app */,
+				A65E9A9625903A31001CF607 /* Carduino iOS.app */,
+				A65E9A9E25903A31001CF607 /* Tests iOS.xctest */,
+				A65E9AA925903A31001CF607 /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A60E1A05258DA43800912F4F /* Carduino iOS */ = {
+		A65E9A9025903A31001CF607 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A60E1A06258DA43800912F4F /* Carduino_iOSApp.swift */,
-				A60E1A08258DA43800912F4F /* ContentView.swift */,
-				A60E1A0A258DA43900912F4F /* Assets.xcassets */,
-				A60E1A0F258DA43900912F4F /* Info.plist */,
-				A60E1A0C258DA43900912F4F /* Preview Content */,
+				A65E9A9125903A31001CF607 /* Info.plist */,
 			);
-			path = "Carduino iOS";
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		A60E1A0C258DA43900912F4F /* Preview Content */ = {
+		A65E9A9725903A31001CF607 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				A60E1A0D258DA43900912F4F /* Preview Assets.xcassets */,
+				A65E9A9825903A31001CF607 /* Info.plist */,
+				A65E9A9925903A31001CF607 /* macOS.entitlements */,
 			);
-			path = "Preview Content";
+			path = macOS;
 			sourceTree = "<group>";
 		};
-		A60E1A17258DA43A00912F4F /* Carduino iOSTests */ = {
+		A65E9AA125903A31001CF607 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A60E1A18258DA43A00912F4F /* Carduino_iOSTests.swift */,
-				A60E1A1A258DA43A00912F4F /* Info.plist */,
+				A65E9AA225903A31001CF607 /* Tests_iOS.swift */,
+				A65E9AA425903A31001CF607 /* Info.plist */,
 			);
-			path = "Carduino iOSTests";
+			path = "Tests iOS";
 			sourceTree = "<group>";
 		};
-		A60E1A22258DA43A00912F4F /* Carduino iOSUITests */ = {
+		A65E9AAC25903A31001CF607 /* Tests macOS */ = {
 			isa = PBXGroup;
 			children = (
-				A60E1A23258DA43A00912F4F /* Carduino_iOSUITests.swift */,
-				A60E1A25258DA43A00912F4F /* Info.plist */,
+				A65E9AAD25903A31001CF607 /* Tests_macOS.swift */,
+				A65E9AAF25903A31001CF607 /* Info.plist */,
 			);
-			path = "Carduino iOSUITests";
+			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A60E1A02258DA43800912F4F /* Carduino iOS */ = {
+		A65E9A8D25903A31001CF607 /* Carduino iOS (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A60E1A28258DA43A00912F4F /* Build configuration list for PBXNativeTarget "Carduino iOS" */;
+			buildConfigurationList = A65E9ABC25903A31001CF607 /* Build configuration list for PBXNativeTarget "Carduino iOS (iOS)" */;
 			buildPhases = (
-				A60E19FF258DA43800912F4F /* Sources */,
-				A60E1A00258DA43800912F4F /* Frameworks */,
-				A60E1A01258DA43800912F4F /* Resources */,
+				A65E9A8A25903A31001CF607 /* Sources */,
+				A65E9A8B25903A31001CF607 /* Frameworks */,
+				A65E9A8C25903A31001CF607 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Carduino iOS";
-			productName = "Carduino iOS";
-			productReference = A60E1A03258DA43800912F4F /* Carduino iOS.app */;
+			name = "Carduino iOS (iOS)";
+			productName = "Carduino iOS (iOS)";
+			productReference = A65E9A8E25903A31001CF607 /* Carduino iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A60E1A13258DA43A00912F4F /* Carduino iOSTests */ = {
+		A65E9A9525903A31001CF607 /* Carduino iOS (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A60E1A2B258DA43A00912F4F /* Build configuration list for PBXNativeTarget "Carduino iOSTests" */;
+			buildConfigurationList = A65E9ABF25903A31001CF607 /* Build configuration list for PBXNativeTarget "Carduino iOS (macOS)" */;
 			buildPhases = (
-				A60E1A10258DA43A00912F4F /* Sources */,
-				A60E1A11258DA43A00912F4F /* Frameworks */,
-				A60E1A12258DA43A00912F4F /* Resources */,
+				A65E9A9225903A31001CF607 /* Sources */,
+				A65E9A9325903A31001CF607 /* Frameworks */,
+				A65E9A9425903A31001CF607 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A60E1A16258DA43A00912F4F /* PBXTargetDependency */,
 			);
-			name = "Carduino iOSTests";
-			productName = "Carduino iOSTests";
-			productReference = A60E1A14258DA43A00912F4F /* Carduino iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "Carduino iOS (macOS)";
+			productName = "Carduino iOS (macOS)";
+			productReference = A65E9A9625903A31001CF607 /* Carduino iOS.app */;
+			productType = "com.apple.product-type.application";
 		};
-		A60E1A1E258DA43A00912F4F /* Carduino iOSUITests */ = {
+		A65E9A9D25903A31001CF607 /* Tests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A60E1A2E258DA43A00912F4F /* Build configuration list for PBXNativeTarget "Carduino iOSUITests" */;
+			buildConfigurationList = A65E9AC225903A31001CF607 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
 			buildPhases = (
-				A60E1A1B258DA43A00912F4F /* Sources */,
-				A60E1A1C258DA43A00912F4F /* Frameworks */,
-				A60E1A1D258DA43A00912F4F /* Resources */,
+				A65E9A9A25903A31001CF607 /* Sources */,
+				A65E9A9B25903A31001CF607 /* Frameworks */,
+				A65E9A9C25903A31001CF607 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A60E1A21258DA43A00912F4F /* PBXTargetDependency */,
+				A65E9AA025903A31001CF607 /* PBXTargetDependency */,
 			);
-			name = "Carduino iOSUITests";
-			productName = "Carduino iOSUITests";
-			productReference = A60E1A1F258DA43A00912F4F /* Carduino iOSUITests.xctest */;
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = A65E9A9E25903A31001CF607 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		A65E9AA825903A31001CF607 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A65E9AC525903A31001CF607 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				A65E9AA525903A31001CF607 /* Sources */,
+				A65E9AA625903A31001CF607 /* Frameworks */,
+				A65E9AA725903A31001CF607 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A65E9AAB25903A31001CF607 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = A65E9AA925903A31001CF607 /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A60E19FB258DA43800912F4F /* Project object */ = {
+		A65E9A7F25903A2E001CF607 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					A60E1A02258DA43800912F4F = {
+					A65E9A8D25903A31001CF607 = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					A60E1A13258DA43A00912F4F = {
+					A65E9A9525903A31001CF607 = {
 						CreatedOnToolsVersion = 12.3;
-						TestTargetID = A60E1A02258DA43800912F4F;
 					};
-					A60E1A1E258DA43A00912F4F = {
+					A65E9A9D25903A31001CF607 = {
 						CreatedOnToolsVersion = 12.3;
-						TestTargetID = A60E1A02258DA43800912F4F;
+						TestTargetID = A65E9A8D25903A31001CF607;
+					};
+					A65E9AA825903A31001CF607 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = A65E9A9525903A31001CF607;
 					};
 				};
 			};
-			buildConfigurationList = A60E19FE258DA43800912F4F /* Build configuration list for PBXProject "Carduino iOS" */;
+			buildConfigurationList = A65E9A8225903A2F001CF607 /* Build configuration list for PBXProject "Carduino iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,36 +265,44 @@
 				en,
 				Base,
 			);
-			mainGroup = A60E19FA258DA43800912F4F;
-			productRefGroup = A60E1A04258DA43800912F4F /* Products */;
+			mainGroup = A65E9A7E25903A2E001CF607;
+			productRefGroup = A65E9A8F25903A31001CF607 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A60E1A02258DA43800912F4F /* Carduino iOS */,
-				A60E1A13258DA43A00912F4F /* Carduino iOSTests */,
-				A60E1A1E258DA43A00912F4F /* Carduino iOSUITests */,
+				A65E9A8D25903A31001CF607 /* Carduino iOS (iOS) */,
+				A65E9A9525903A31001CF607 /* Carduino iOS (macOS) */,
+				A65E9A9D25903A31001CF607 /* Tests iOS */,
+				A65E9AA825903A31001CF607 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A60E1A01258DA43800912F4F /* Resources */ = {
+		A65E9A8C25903A31001CF607 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60E1A0E258DA43900912F4F /* Preview Assets.xcassets in Resources */,
-				A60E1A0B258DA43900912F4F /* Assets.xcassets in Resources */,
+				A65E9AB825903A31001CF607 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A60E1A12258DA43A00912F4F /* Resources */ = {
+		A65E9A9425903A31001CF607 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65E9AB925903A31001CF607 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E9A9C25903A31001CF607 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A60E1A1D258DA43A00912F4F /* Resources */ = {
+		A65E9AA725903A31001CF607 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,48 +312,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A60E19FF258DA43800912F4F /* Sources */ = {
+		A65E9A8A25903A31001CF607 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60E1A09258DA43800912F4F /* ContentView.swift in Sources */,
-				A60E1A07258DA43800912F4F /* Carduino_iOSApp.swift in Sources */,
+				A65E9AB225903A31001CF607 /* Carduino_iOSApp.swift in Sources */,
+				A65E9AB625903A31001CF607 /* Persistence.swift in Sources */,
+				A65E9AB025903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */,
+				A65E9AB425903A31001CF607 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A60E1A10258DA43A00912F4F /* Sources */ = {
+		A65E9A9225903A31001CF607 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60E1A19258DA43A00912F4F /* Carduino_iOSTests.swift in Sources */,
+				A65E9AB325903A31001CF607 /* Carduino_iOSApp.swift in Sources */,
+				A65E9AB725903A31001CF607 /* Persistence.swift in Sources */,
+				A65E9AB125903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */,
+				A65E9AB525903A31001CF607 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A60E1A1B258DA43A00912F4F /* Sources */ = {
+		A65E9A9A25903A31001CF607 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A60E1A24258DA43A00912F4F /* Carduino_iOSUITests.swift in Sources */,
+				A65E9AA325903A31001CF607 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65E9AA525903A31001CF607 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65E9AAE25903A31001CF607 /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A60E1A16258DA43A00912F4F /* PBXTargetDependency */ = {
+		A65E9AA025903A31001CF607 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A60E1A02258DA43800912F4F /* Carduino iOS */;
-			targetProxy = A60E1A15258DA43A00912F4F /* PBXContainerItemProxy */;
+			target = A65E9A8D25903A31001CF607 /* Carduino iOS (iOS) */;
+			targetProxy = A65E9A9F25903A31001CF607 /* PBXContainerItemProxy */;
 		};
-		A60E1A21258DA43A00912F4F /* PBXTargetDependency */ = {
+		A65E9AAB25903A31001CF607 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A60E1A02258DA43800912F4F /* Carduino iOS */;
-			targetProxy = A60E1A20258DA43A00912F4F /* PBXContainerItemProxy */;
+			target = A65E9A9525903A31001CF607 /* Carduino iOS (macOS) */;
+			targetProxy = A65E9AAA25903A31001CF607 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A60E1A26258DA43A00912F4F /* Debug */ = {
+		A65E9ABA25903A31001CF607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -347,17 +417,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		A60E1A27258DA43A00912F4F /* Release */ = {
+		A65E9ABB25903A31001CF607 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -402,184 +470,257 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A65E9ABD25903A31001CF607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4JEZRL8YY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Carduino-iOS";
+				PRODUCT_NAME = "Carduino iOS";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A65E9ABE25903A31001CF607 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4JEZRL8YY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Carduino-iOS";
+				PRODUCT_NAME = "Carduino iOS";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A60E1A29258DA43A00912F4F /* Debug */ = {
+		A65E9AC025903A31001CF607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Carduino iOS/Preview Content\"";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S4JEZRL8YY;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Carduino iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Carduino-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Carduino iOS";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A60E1A2A258DA43A00912F4F /* Release */ = {
+		A65E9AC125903A31001CF607 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Carduino iOS/Preview Content\"";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S4JEZRL8YY;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Carduino iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Carduino-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Carduino iOS";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		A60E1A2C258DA43A00912F4F /* Debug */ = {
+		A65E9AC325903A31001CF607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4JEZRL8YY;
-				INFOPLIST_FILE = "Carduino iOSTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Carduino-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carduino iOS.app/Carduino iOS";
+				TEST_TARGET_NAME = "Carduino iOS (iOS)";
 			};
 			name = Debug;
 		};
-		A60E1A2D258DA43A00912F4F /* Release */ = {
+		A65E9AC425903A31001CF607 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4JEZRL8YY;
-				INFOPLIST_FILE = "Carduino iOSTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Carduino-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carduino iOS.app/Carduino iOS";
+				TEST_TARGET_NAME = "Carduino iOS (iOS)";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A60E1A2F258DA43A00912F4F /* Debug */ = {
+		A65E9AC625903A31001CF607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S4JEZRL8YY;
-				INFOPLIST_FILE = "Carduino iOSUITests/Info.plist";
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Carduino-iOSUITests";
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Carduino iOS";
+				TEST_TARGET_NAME = "Carduino iOS (macOS)";
 			};
 			name = Debug;
 		};
-		A60E1A30258DA43A00912F4F /* Release */ = {
+		A65E9AC725903A31001CF607 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S4JEZRL8YY;
-				INFOPLIST_FILE = "Carduino iOSUITests/Info.plist";
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Carduino-iOSUITests";
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carduino.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Carduino iOS";
+				TEST_TARGET_NAME = "Carduino iOS (macOS)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A60E19FE258DA43800912F4F /* Build configuration list for PBXProject "Carduino iOS" */ = {
+		A65E9A8225903A2F001CF607 /* Build configuration list for PBXProject "Carduino iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A60E1A26258DA43A00912F4F /* Debug */,
-				A60E1A27258DA43A00912F4F /* Release */,
+				A65E9ABA25903A31001CF607 /* Debug */,
+				A65E9ABB25903A31001CF607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A60E1A28258DA43A00912F4F /* Build configuration list for PBXNativeTarget "Carduino iOS" */ = {
+		A65E9ABC25903A31001CF607 /* Build configuration list for PBXNativeTarget "Carduino iOS (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A60E1A29258DA43A00912F4F /* Debug */,
-				A60E1A2A258DA43A00912F4F /* Release */,
+				A65E9ABD25903A31001CF607 /* Debug */,
+				A65E9ABE25903A31001CF607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A60E1A2B258DA43A00912F4F /* Build configuration list for PBXNativeTarget "Carduino iOSTests" */ = {
+		A65E9ABF25903A31001CF607 /* Build configuration list for PBXNativeTarget "Carduino iOS (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A60E1A2C258DA43A00912F4F /* Debug */,
-				A60E1A2D258DA43A00912F4F /* Release */,
+				A65E9AC025903A31001CF607 /* Debug */,
+				A65E9AC125903A31001CF607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A60E1A2E258DA43A00912F4F /* Build configuration list for PBXNativeTarget "Carduino iOSUITests" */ = {
+		A65E9AC225903A31001CF607 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A60E1A2F258DA43A00912F4F /* Debug */,
-				A60E1A30258DA43A00912F4F /* Release */,
+				A65E9AC325903A31001CF607 /* Debug */,
+				A65E9AC425903A31001CF607 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A65E9AC525903A31001CF607 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65E9AC625903A31001CF607 /* Debug */,
+				A65E9AC725903A31001CF607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A65E9A8425903A2F001CF607 /* Carduino_iOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A65E9A8525903A2F001CF607 /* Shared.xcdatamodel */,
+			);
+			currentVersion = A65E9A8525903A2F001CF607 /* Shared.xcdatamodel */;
+			path = Carduino_iOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = A60E19FB258DA43800912F4F /* Project object */;
+	rootObject = A65E9A7F25903A2E001CF607 /* Project object */;
 }
