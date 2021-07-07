@@ -17,6 +17,9 @@ struct CarduinoBaseView: View {
                     NavigationLink(destination: DrivesView()) {
                         Text("Drives")
                     }
+                    NavigationLink(destination: VehiclesView()) {
+                        Text("Vehicles")
+                    }
                 }
             }.navigationBarTitle(Text("Carduino"))
             .accentColor(.orange)

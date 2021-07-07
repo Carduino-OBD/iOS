@@ -11,30 +11,21 @@
         }
       },
       {
-        "package": "IceCream",
-        "repositoryURL": "https://github.com/caiyue1993/IceCream.git",
+        "package": "BlueCap",
+        "repositoryURL": "https://github.com/jvigneshcs/BlueCap.git",
         "state": {
-          "branch": null,
-          "revision": "634f8a29be7bae2d8bf719aa4ede5ca2052b9d28",
-          "version": "2.0.2"
+          "branch": "master",
+          "revision": "e846eeb21be25ce15a46bfd34c51b56c0e7657dd",
+          "version": null
         }
       },
       {
-        "package": "Realm",
-        "repositoryURL": "https://github.com/realm/realm-cocoa",
+        "package": "Polyline",
+        "repositoryURL": "https://github.com/raphaelmor/Polyline.git",
         "state": {
           "branch": null,
-          "revision": "fa43b8e2909334c79f233ce472332c136ca108da",
-          "version": "4.4.1"
-        }
-      },
-      {
-        "package": "RealmCore",
-        "repositoryURL": "https://github.com/realm/realm-core",
-        "state": {
-          "branch": null,
-          "revision": "35662ff940e340bf630ad1d1d88acfc7af18bee6",
-          "version": "5.23.8"
+          "revision": "36f7b1222aaf8fa741d0d179c12e186998d97f42",
+          "version": "5.0.2"
         }
       }
     ]

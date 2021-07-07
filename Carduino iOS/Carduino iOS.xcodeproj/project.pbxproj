@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A61B56DB268223DC000F77B5 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B56DA268223DC000F77B5 /* BluetoothManager.swift */; };
+		A61B56DC268223DC000F77B5 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B56DA268223DC000F77B5 /* BluetoothManager.swift */; };
+		A61B56E526837669000F77B5 /* BlueCap in Frameworks */ = {isa = PBXBuildFile; productRef = A61B56E426837669000F77B5 /* BlueCap */; };
+		A64B7EE726938CC500B6C2CD /* Drive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B7EE626938CC500B6C2CD /* Drive.swift */; };
+		A64B7EE826938CC500B6C2CD /* Drive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64B7EE626938CC500B6C2CD /* Drive.swift */; };
+		A64BC943269531FC00FF5E1E /* VehiclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC942269531FC00FF5E1E /* VehiclesView.swift */; };
+		A64BC944269531FC00FF5E1E /* VehiclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC942269531FC00FF5E1E /* VehiclesView.swift */; };
+		A64BC9462695320800FF5E1E /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC9452695320800FF5E1E /* VehicleView.swift */; };
+		A64BC9472695320800FF5E1E /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC9452695320800FF5E1E /* VehicleView.swift */; };
 		A65E9AA325903A31001CF607 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9AA225903A31001CF607 /* Tests_iOS.swift */; };
 		A65E9AAE25903A31001CF607 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9AAD25903A31001CF607 /* Tests_macOS.swift */; };
 		A65E9AB025903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8425903A2F001CF607 /* Carduino_iOS.xcdatamodeld */; };
@@ -21,15 +30,17 @@
 		A65E9AB925903A31001CF607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65E9A8925903A31001CF607 /* Assets.xcassets */; };
 		A66D507B265DA94000DB2909 /* DrivesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D507A265DA94000DB2909 /* DrivesView.swift */; };
 		A66D507C265DA94000DB2909 /* DrivesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D507A265DA94000DB2909 /* DrivesView.swift */; };
-		A66D507F265DAD0E00DB2909 /* DriveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D507E265DAD0E00DB2909 /* DriveManager.swift */; };
-		A66D5080265DAD0E00DB2909 /* DriveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D507E265DAD0E00DB2909 /* DriveManager.swift */; };
-		A66D5085265DAE9E00DB2909 /* IceCream in Frameworks */ = {isa = PBXBuildFile; productRef = A66D5084265DAE9E00DB2909 /* IceCream */; };
 		A66D5088265DAEBD00DB2909 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66D5087265DAEBD00DB2909 /* CloudKit.framework */; };
 		A66D508A265DAFCB00DB2909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D5089265DAFCB00DB2909 /* AppDelegate.swift */; };
 		A66D508B265DAFCB00DB2909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D5089265DAFCB00DB2909 /* AppDelegate.swift */; };
-		A6F0F79B265426C800124D58 /* Drive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0F79A265426C800124D58 /* Drive.swift */; };
-		A6F0F79C265426D600124D58 /* Drive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0F79A265426C800124D58 /* Drive.swift */; };
+		A6A59D9026866F0D003678B4 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = A6A59D8F26866F0D003678B4 /* Polyline */; };
+		A6F0F79B265426C800124D58 /* DriveV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0F79A265426C800124D58 /* DriveV1.swift */; };
+		A6F0F79C265426D600124D58 /* DriveV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0F79A265426C800124D58 /* DriveV1.swift */; };
 		A6F0F7A22654737600124D58 /* Ampere in Frameworks */ = {isa = PBXBuildFile; productRef = A6F0F7A12654737600124D58 /* Ampere */; };
+		A6F822462694AE3B00B799A7 /* DriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F822452694AE3B00B799A7 /* DriveView.swift */; };
+		A6F822472694AE3B00B799A7 /* DriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F822452694AE3B00B799A7 /* DriveView.swift */; };
+		A6F8224A269506E900B799A7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F82249269506E800B799A7 /* MapView.swift */; };
+		A6F8224B269506E900B799A7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F82249269506E800B799A7 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A61B56DA268223DC000F77B5 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		A64B7EE626938CC500B6C2CD /* Drive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drive.swift; sourceTree = "<group>"; };
+		A64BC942269531FC00FF5E1E /* VehiclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesView.swift; sourceTree = "<group>"; };
+		A64BC9452695320800FF5E1E /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		A65E9A8525903A2F001CF607 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A65E9A8625903A2F001CF607 /* Carduino_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carduino_iOSApp.swift; sourceTree = "<group>"; };
 		A65E9A8725903A2F001CF607 /* CarduinoBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarduinoBaseView.swift; sourceTree = "<group>"; };
@@ -67,11 +82,12 @@
 		A65E9AAD25903A31001CF607 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		A65E9AAF25903A31001CF607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A66D507A265DA94000DB2909 /* DrivesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivesView.swift; sourceTree = "<group>"; };
-		A66D507E265DAD0E00DB2909 /* DriveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveManager.swift; sourceTree = "<group>"; };
 		A66D5081265DAD4100DB2909 /* Carduino iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Carduino iOS.entitlements"; sourceTree = "<group>"; };
 		A66D5087265DAEBD00DB2909 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		A66D5089265DAFCB00DB2909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A6F0F79A265426C800124D58 /* Drive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drive.swift; sourceTree = "<group>"; };
+		A6F0F79A265426C800124D58 /* DriveV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveV1.swift; sourceTree = "<group>"; };
+		A6F822452694AE3B00B799A7 /* DriveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveView.swift; sourceTree = "<group>"; };
+		A6F82249269506E800B799A7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +97,8 @@
 			files = (
 				A66D5088265DAEBD00DB2909 /* CloudKit.framework in Frameworks */,
 				A6F0F7A22654737600124D58 /* Ampere in Frameworks */,
-				A66D5085265DAE9E00DB2909 /* IceCream in Frameworks */,
+				A61B56E526837669000F77B5 /* BlueCap in Frameworks */,
+				A6A59D9026866F0D003678B4 /* Polyline in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,8 +147,7 @@
 				A6F0F79D26546EF400124D58 /* Utility */,
 				A6F0F799265426AF00124D58 /* Model */,
 				A65E9A8625903A2F001CF607 /* Carduino_iOSApp.swift */,
-				A65E9A8725903A2F001CF607 /* CarduinoBaseView.swift */,
-				A66D507A265DA94000DB2909 /* DrivesView.swift */,
+				A6F822442694AE0100B799A7 /* View */,
 				A65E9A8825903A2F001CF607 /* Persistence.swift */,
 				A66D5089265DAFCB00DB2909 /* AppDelegate.swift */,
 				A65E9A8925903A31001CF607 /* Assets.xcassets */,
@@ -189,7 +205,7 @@
 		A66D507D265DACE800DB2909 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				A66D507E265DAD0E00DB2909 /* DriveManager.swift */,
+				A61B56DA268223DC000F77B5 /* BluetoothManager.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -205,7 +221,8 @@
 		A6F0F799265426AF00124D58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A6F0F79A265426C800124D58 /* Drive.swift */,
+				A6F0F79A265426C800124D58 /* DriveV1.swift */,
+				A64B7EE626938CC500B6C2CD /* Drive.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +232,27 @@
 			children = (
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		A6F822442694AE0100B799A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6F82248269506DD00B799A7 /* Helpers */,
+				A65E9A8725903A2F001CF607 /* CarduinoBaseView.swift */,
+				A66D507A265DA94000DB2909 /* DrivesView.swift */,
+				A6F822452694AE3B00B799A7 /* DriveView.swift */,
+				A64BC942269531FC00FF5E1E /* VehiclesView.swift */,
+				A64BC9452695320800FF5E1E /* VehicleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A6F82248269506DD00B799A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A6F82249269506E800B799A7 /* MapView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +273,8 @@
 			name = "Carduino iOS (iOS)";
 			packageProductDependencies = (
 				A6F0F7A12654737600124D58 /* Ampere */,
-				A66D5084265DAE9E00DB2909 /* IceCream */,
+				A61B56E426837669000F77B5 /* BlueCap */,
+				A6A59D8F26866F0D003678B4 /* Polyline */,
 			);
 			productName = "Carduino iOS (iOS)";
 			productReference = A65E9A8E25903A31001CF607 /* Carduino iOS.app */;
@@ -320,7 +359,7 @@
 				};
 			};
 			buildConfigurationList = A65E9A8225903A2F001CF607 /* Build configuration list for PBXProject "Carduino iOS" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -330,7 +369,8 @@
 			mainGroup = A65E9A7E25903A2E001CF607;
 			packageReferences = (
 				A6F0F7A02654737600124D58 /* XCRemoteSwiftPackageReference "Ampere" */,
-				A66D5083265DAE9E00DB2909 /* XCRemoteSwiftPackageReference "IceCream" */,
+				A61B56E326837669000F77B5 /* XCRemoteSwiftPackageReference "BlueCap" */,
+				A6A59D8E26866F0D003678B4 /* XCRemoteSwiftPackageReference "Polyline" */,
 			);
 			productRefGroup = A65E9A8F25903A31001CF607 /* Products */;
 			projectDirPath = "";
@@ -383,12 +423,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66D508A265DAFCB00DB2909 /* AppDelegate.swift in Sources */,
-				A66D507F265DAD0E00DB2909 /* DriveManager.swift in Sources */,
+				A64BC9462695320800FF5E1E /* VehicleView.swift in Sources */,
+				A6F8224A269506E900B799A7 /* MapView.swift in Sources */,
 				A65E9AB225903A31001CF607 /* Carduino_iOSApp.swift in Sources */,
-				A6F0F79B265426C800124D58 /* Drive.swift in Sources */,
+				A6F0F79B265426C800124D58 /* DriveV1.swift in Sources */,
+				A64BC943269531FC00FF5E1E /* VehiclesView.swift in Sources */,
 				A65E9AB625903A31001CF607 /* Persistence.swift in Sources */,
 				A65E9AB025903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */,
+				A6F822462694AE3B00B799A7 /* DriveView.swift in Sources */,
+				A64B7EE726938CC500B6C2CD /* Drive.swift in Sources */,
 				A65E9AB425903A31001CF607 /* CarduinoBaseView.swift in Sources */,
+				A61B56DB268223DC000F77B5 /* BluetoothManager.swift in Sources */,
 				A66D507B265DA94000DB2909 /* DrivesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,12 +443,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66D508B265DAFCB00DB2909 /* AppDelegate.swift in Sources */,
-				A66D5080265DAD0E00DB2909 /* DriveManager.swift in Sources */,
+				A64BC9472695320800FF5E1E /* VehicleView.swift in Sources */,
+				A6F8224B269506E900B799A7 /* MapView.swift in Sources */,
 				A65E9AB325903A31001CF607 /* Carduino_iOSApp.swift in Sources */,
-				A6F0F79C265426D600124D58 /* Drive.swift in Sources */,
+				A6F0F79C265426D600124D58 /* DriveV1.swift in Sources */,
+				A64BC944269531FC00FF5E1E /* VehiclesView.swift in Sources */,
 				A65E9AB725903A31001CF607 /* Persistence.swift in Sources */,
 				A65E9AB125903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */,
+				A6F822472694AE3B00B799A7 /* DriveView.swift in Sources */,
+				A64B7EE826938CC500B6C2CD /* Drive.swift in Sources */,
 				A65E9AB525903A31001CF607 /* CarduinoBaseView.swift in Sources */,
+				A61B56DC268223DC000F77B5 /* BluetoothManager.swift in Sources */,
 				A66D507C265DA94000DB2909 /* DrivesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,12 +838,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A66D5083265DAE9E00DB2909 /* XCRemoteSwiftPackageReference "IceCream" */ = {
+		A61B56E326837669000F77B5 /* XCRemoteSwiftPackageReference "BlueCap" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/caiyue1993/IceCream.git";
+			repositoryURL = "https://github.com/jvigneshcs/BlueCap.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A6A59D8E26866F0D003678B4 /* XCRemoteSwiftPackageReference "Polyline" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raphaelmor/Polyline.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.2;
+				minimumVersion = 5.0.2;
 			};
 		};
 		A6F0F7A02654737600124D58 /* XCRemoteSwiftPackageReference "Ampere" */ = {
@@ -807,10 +865,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A66D5084265DAE9E00DB2909 /* IceCream */ = {
+		A61B56E426837669000F77B5 /* BlueCap */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A66D5083265DAE9E00DB2909 /* XCRemoteSwiftPackageReference "IceCream" */;
-			productName = IceCream;
+			package = A61B56E326837669000F77B5 /* XCRemoteSwiftPackageReference "BlueCap" */;
+			productName = BlueCap;
+		};
+		A6A59D8F26866F0D003678B4 /* Polyline */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6A59D8E26866F0D003678B4 /* XCRemoteSwiftPackageReference "Polyline" */;
+			productName = Polyline;
 		};
 		A6F0F7A12654737600124D58 /* Ampere */ = {
 			isa = XCSwiftPackageProductDependency;

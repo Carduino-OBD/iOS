@@ -5,27 +5,64 @@
 //  Created by Alex Taffe on 5/25/21.
 //
 
+import Foundation
 import SwiftUI
 import MapKit
 
 struct DrivesView: View {
+    
+    var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        return dateFormatter
+    }()
+    
+    
     var body: some View {
+        let dict = DriveManager.getDateMappedDrives()
+        
         Form {
-            Section(header: Text("1/12/20")) {
-                DriveRow()
-                DriveRow()
+            ForEach(Array(dict.keys), id: \.self) { date in
+                let headerText = dateFormatter.string(from: date)
+                let drives = dict[date]!
+                Section(header: Text(headerText)) {
+                    ForEach(drives) { drive in
+                        DriveRow(drive: drive)
+                    }
+                }
             }
             
-            Section(header: Text("1/13/20")) {
-                DriveRow()
-                DriveRow()
-            }
         }
+        .navigationBarTitle(Text("Drives"))
         .accentColor(.orange)
     }
 }
 
 struct DriveRow: View {
+    var drive: DriveV1
+    
+    var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        return dateFormatter
+    }()
+    
+    var timeFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        return dateFormatter
+    }()
+    
+    var measurementFormatter: MeasurementFormatter = {
+        let formatter = MeasurementFormatter()
+        formatter.locale = Locale.current
+        formatter.unitStyle = .medium
+        return formatter
+    }()
+    
     @State private var region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(
                 latitude: 25.7617,
@@ -41,16 +78,18 @@ struct DriveRow: View {
         VStack{
             HStack {
                 HStack{
-                    Text("12:20pm")
+                    let startTime = timeFormatter.string(from: drive.path.first!.date)
+                    let endTime = timeFormatter.string(from: drive.path.last!.date)
+                    Text(startTime)
                         .font(.subheadline)
                     Image(systemName: "arrow.right.circle.fill")
                         .foregroundColor(.red)
                         .font(.subheadline)
-                    Text("3:10pm")
+                    Text(endTime)
                         .font(.subheadline)
                 }.frame(maxWidth: .infinity)
                 HStack {
-                    Text("20.3 mi")
+                    Text(measurementFormatter.string(from: drive.distance))
                         .font(.subheadline)
                     Text("2 hr 50 min")
                         .font(.subheadline)

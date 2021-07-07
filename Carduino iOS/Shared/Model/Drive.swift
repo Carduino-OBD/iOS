@@ -1,89 +1,60 @@
 //
 //  Drive.swift
-//  Carduino iOS (iOS)
+//  Carduino iOS
 //
-//  Created by Alex Taffe on 5/18/21.
+//  Created by Alex Taffe on 7/5/21.
 //
 
 import Foundation
-import RealmSwift
-import IceCream
-import CloudKit
-import CoreLocation
 
-class DrivePoint: Object {
-    var point: CLLocation
-    var time: Date
+enum DriveParseError: Error {
+    case unknownVersion(message: String),
+         invalidDriveFrameSize,
+         mismatchedPolylineFrameCount,
+         polylineInvalid,
+         packetSizeInvalid
+}
+
+protocol Drive {
     
-    init(point: CLLocation, time: Date) {
-        self.point = point
-        self.time = time
-    }
-    
-    required init() {
-        fatalError("init() has not been implemented")
+}
+
+class DriveParser {
+    static func getDrive(data: Data) throws -> Drive {
+        let versionNumber = data.subdata(in: 0..<2).withUnsafeBytes({ $0.load(as: UInt16.self) }).littleEndian
+        switch versionNumber {
+        case 1:
+            return try DriveV1(data: data)
+        default:
+            throw DriveParseError.unknownVersion(message: "Unknown drive version \(versionNumber), please try updating your app")
+        }
     }
 }
 
-class Drive: Object {
-    @objc dynamic var id = NSUUID().uuidString
-    @objc dynamic var isDeleted = false
-    
-    override class func primaryKey() -> String? {
-        return "id"
-    }
+class DriveManager {
+    static func getDrives() -> [DriveV1] {
+        let icloudDestinationURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents") ?? URL(string: "/")!
+        let drives = try? FileManager.default.contentsOfDirectory(at: icloudDestinationURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            .filter({ $0.pathExtension == "cdu" }) // We only want CDU documents
+            .map({ try? Data(contentsOf: $0) }) // Attempt to read in the data
+            .compactMap { $0 } // Remove any failed attempts at reading
+            .map({ try? DriveV1(data: $0) }) // Convert the data to drives
+            .compactMap { $0 } // Remove any failed attempts at parsing
         
-    
-    @objc dynamic var path: [DrivePoint] = [DrivePoint]()
-    @objc dynamic var fuelUsed = Measurement(value: 0, unit: UnitVolume.gallons)
-
-    var startCoordinateHumanReadableName: String?
-    var endCoordinateHumanReadableName: String?
-    
-    
-    var startPoint: DrivePoint? {
-        get {
-            return self.path.first
+        if drives == nil {
+            print("Warning: unable to retrieve drives")
         }
+        return drives ?? [DriveV1]()
     }
     
-    var endPoint: DrivePoint? {
-        get {
-            return self.path.last
-        }
+    static func getDateMappedDrives() -> [Date: [DriveV1]] {
+        return getDrives().reduce([Date: [DriveV1]](), { result, drive in
+            var result = result
+            let components = Calendar.current.dateComponents([.year, .month, .day], from: drive.path.first!.date)
+            let date = Calendar.current.date(from: components)!
+            let existing = result[date] ?? [DriveV1]()
+            result[date] = existing + [drive]
+            return result
+        })
     }
-    
-    var distance: Measurement<UnitLength> {
-        get {
-            guard self.path.count >= 2 else {
-                return Measurement(value: 0, unit: UnitLength.meters)
-            }
-            var total = 0.0
-            for i in 1..<self.path.count {
-                total += self.path[i-1].point.distance(from: self.path[i-1].point)
-            }
-            return Measurement(value: total, unit: UnitLength.meters)
-        }
-    }
-    
-    var duration: TimeInterval {
-        get {
-            guard self.path.count >= 2 else {
-                return 0
-            }
-            return self.path.last!.time.timeIntervalSince(self.path.first!.time)
-        }
-    }
-    
-//    var fuelEfficiency: Measurement<UnitFuelEfficiency> {
-//        get {
-//            return Measurement(value: self.distance / self.fuelUsed, unit: UnitFuelEfficiency.milesPerGallon)
-//        }
-//    }
-}
-
-extension Drive: CKRecordConvertible & CKRecordRecoverable {
-        
-
-
 }
