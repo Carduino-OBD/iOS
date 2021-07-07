@@ -19,7 +19,9 @@ struct VehiclesView: View {
             Section {
                 ForEach(vehicleObserver.vehicles.indices) { idx in
                     let vehicle = vehicleObserver.vehicles[idx]
-                    NavigationLink(vehicle.vin, destination: VehicleView(vehicle: self.$vehicleObserver.vehicles[idx]))
+                    // If we have a nickname, display it and the VIN. Otherwise, display just the VIN
+                    let vehicleDescription = vehicle.nickname != "" ? (vehicle.nickname + " (" + vehicle.vin + ")") : vehicle.vin
+                    NavigationLink(vehicleDescription, destination: VehicleView(vehicle: self.$vehicleObserver.vehicles[idx]))
                 }
             }
         }
