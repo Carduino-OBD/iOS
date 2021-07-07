@@ -63,6 +63,12 @@ struct DriveRow: View {
         return formatter
     }()
     
+    let relativeDateFormatter: RelativeDateTimeFormatter = {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.dateTimeStyle = .named
+        return formatter
+    }()
+    
     @State private var region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(
                 latitude: 25.7617,
@@ -91,11 +97,11 @@ struct DriveRow: View {
                 HStack {
                     Text(measurementFormatter.string(from: drive.distance))
                         .font(.subheadline)
-                    Text("2 hr 50 min")
+                    Text(relativeDateFormatter.localizedString(fromTimeInterval: drive.duration))
                         .font(.subheadline)
                 }.frame(maxWidth: .infinity)
             }
-            Map(coordinateRegion: $region)
+            MapView(route: drive.mkPolyline)
                 .frame(height: 200.0)
             HStack {
                 Text("1501 Ashbury Lane")

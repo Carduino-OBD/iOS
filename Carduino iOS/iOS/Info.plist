@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDocumentTypes</key>
@@ -94,17 +96,17 @@
 			</dict>
 		</dict>
 	</array>
-    <key>NSUbiquitousContainers</key>
-    <dict>
-        <key>iCloud.Carduino</key>
-        <dict>
-            <key>NSUbiquitousContainerIsDocumentScopePublic</key>
-            <true/>
-            <key>NSUbiquitousContainerName</key>
-            <string>Carduino</string>
-            <key>NSUbiquitousContainerSupportedFolderLevels</key>
-            <string>Any</string>
-        </dict>
-    </dict>
+	<key>NSUbiquitousContainers</key>
+	<dict>
+		<key>iCloud.Carduino</key>
+		<dict>
+			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
+			<true/>
+			<key>NSUbiquitousContainerName</key>
+			<string>Carduino</string>
+			<key>NSUbiquitousContainerSupportedFolderLevels</key>
+			<string>Any</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

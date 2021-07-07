@@ -16,6 +16,14 @@
 		A64BC944269531FC00FF5E1E /* VehiclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC942269531FC00FF5E1E /* VehiclesView.swift */; };
 		A64BC9462695320800FF5E1E /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC9452695320800FF5E1E /* VehicleView.swift */; };
 		A64BC9472695320800FF5E1E /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC9452695320800FF5E1E /* VehicleView.swift */; };
+		A64BC9492695360900FF5E1E /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC9482695360900FF5E1E /* Vehicle.swift */; };
+		A64BC94A2695360900FF5E1E /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC9482695360900FF5E1E /* Vehicle.swift */; };
+		A64BC94C2695377D00FF5E1E /* VehicleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC94B2695377D00FF5E1E /* VehicleObserver.swift */; };
+		A64BC94D2695377D00FF5E1E /* VehicleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC94B2695377D00FF5E1E /* VehicleObserver.swift */; };
+		A64BC94F2695378500FF5E1E /* DriveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC94E2695378500FF5E1E /* DriveManager.swift */; };
+		A64BC9502695378500FF5E1E /* DriveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC94E2695378500FF5E1E /* DriveManager.swift */; };
+		A64BC95226953D9300FF5E1E /* OptionalBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC95126953D9300FF5E1E /* OptionalBinding.swift */; };
+		A64BC95326953D9300FF5E1E /* OptionalBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC95126953D9300FF5E1E /* OptionalBinding.swift */; };
 		A65E9AA325903A31001CF607 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9AA225903A31001CF607 /* Tests_iOS.swift */; };
 		A65E9AAE25903A31001CF607 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9AAD25903A31001CF607 /* Tests_macOS.swift */; };
 		A65E9AB025903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8425903A2F001CF607 /* Carduino_iOS.xcdatamodeld */; };
@@ -65,6 +73,10 @@
 		A64B7EE626938CC500B6C2CD /* Drive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drive.swift; sourceTree = "<group>"; };
 		A64BC942269531FC00FF5E1E /* VehiclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesView.swift; sourceTree = "<group>"; };
 		A64BC9452695320800FF5E1E /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
+		A64BC9482695360900FF5E1E /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		A64BC94B2695377D00FF5E1E /* VehicleObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleObserver.swift; sourceTree = "<group>"; };
+		A64BC94E2695378500FF5E1E /* DriveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveManager.swift; sourceTree = "<group>"; };
+		A64BC95126953D9300FF5E1E /* OptionalBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBinding.swift; sourceTree = "<group>"; };
 		A65E9A8525903A2F001CF607 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A65E9A8625903A2F001CF607 /* Carduino_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carduino_iOSApp.swift; sourceTree = "<group>"; };
 		A65E9A8725903A2F001CF607 /* CarduinoBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarduinoBaseView.swift; sourceTree = "<group>"; };
@@ -206,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				A61B56DA268223DC000F77B5 /* BluetoothManager.swift */,
+				A64BC94B2695377D00FF5E1E /* VehicleObserver.swift */,
+				A64BC94E2695378500FF5E1E /* DriveManager.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 			children = (
 				A6F0F79A265426C800124D58 /* DriveV1.swift */,
 				A64B7EE626938CC500B6C2CD /* Drive.swift */,
+				A64BC9482695360900FF5E1E /* Vehicle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +245,7 @@
 		A6F0F79D26546EF400124D58 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				A64BC95126953D9300FF5E1E /* OptionalBinding.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -424,8 +440,11 @@
 			files = (
 				A66D508A265DAFCB00DB2909 /* AppDelegate.swift in Sources */,
 				A64BC9462695320800FF5E1E /* VehicleView.swift in Sources */,
+				A64BC94F2695378500FF5E1E /* DriveManager.swift in Sources */,
+				A64BC94C2695377D00FF5E1E /* VehicleObserver.swift in Sources */,
 				A6F8224A269506E900B799A7 /* MapView.swift in Sources */,
 				A65E9AB225903A31001CF607 /* Carduino_iOSApp.swift in Sources */,
+				A64BC9492695360900FF5E1E /* Vehicle.swift in Sources */,
 				A6F0F79B265426C800124D58 /* DriveV1.swift in Sources */,
 				A64BC943269531FC00FF5E1E /* VehiclesView.swift in Sources */,
 				A65E9AB625903A31001CF607 /* Persistence.swift in Sources */,
@@ -435,6 +454,7 @@
 				A65E9AB425903A31001CF607 /* CarduinoBaseView.swift in Sources */,
 				A61B56DB268223DC000F77B5 /* BluetoothManager.swift in Sources */,
 				A66D507B265DA94000DB2909 /* DrivesView.swift in Sources */,
+				A64BC95226953D9300FF5E1E /* OptionalBinding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,8 +464,11 @@
 			files = (
 				A66D508B265DAFCB00DB2909 /* AppDelegate.swift in Sources */,
 				A64BC9472695320800FF5E1E /* VehicleView.swift in Sources */,
+				A64BC9502695378500FF5E1E /* DriveManager.swift in Sources */,
+				A64BC94D2695377D00FF5E1E /* VehicleObserver.swift in Sources */,
 				A6F8224B269506E900B799A7 /* MapView.swift in Sources */,
 				A65E9AB325903A31001CF607 /* Carduino_iOSApp.swift in Sources */,
+				A64BC94A2695360900FF5E1E /* Vehicle.swift in Sources */,
 				A6F0F79C265426D600124D58 /* DriveV1.swift in Sources */,
 				A64BC944269531FC00FF5E1E /* VehiclesView.swift in Sources */,
 				A65E9AB725903A31001CF607 /* Persistence.swift in Sources */,
@@ -455,6 +478,7 @@
 				A65E9AB525903A31001CF607 /* CarduinoBaseView.swift in Sources */,
 				A61B56DC268223DC000F77B5 /* BluetoothManager.swift in Sources */,
 				A66D507C265DA94000DB2909 /* DrivesView.swift in Sources */,
+				A64BC95326953D9300FF5E1E /* OptionalBinding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

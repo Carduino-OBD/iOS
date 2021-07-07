@@ -6,15 +6,23 @@
 //
 
 import SwiftUI
+import Combine
 
 struct VehicleView: View {
+    @Binding var vehicle: Vehicle
+    
+    @State private var fuelTankSize = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct VehicleView_Previews: PreviewProvider {
-    static var previews: some View {
-        VehicleView()
+        Form {
+            Section {
+                TextField("Nickname", text: $vehicle.nickname ?? "")
+                TextField("Fuel Tank Size", text: $fuelTankSize)
+                    .keyboardType(.decimalPad)
+                    .onReceive(Just(fuelTankSize)) { newValue in
+                        let filtered = newValue.filter { "0123456789.".contains($0) }
+                        self.fuelTankSize = filtered + " gallons"
+                    }
+            }
+        }.navigationTitle(vehicle.vin)
     }
 }

@@ -27,7 +27,7 @@ struct DriveView: View {
     
     var body: some View {
         VStack {
-            MapView(route: $drive.mkPolyline)
+            MapView(route: drive.mkPolyline)
             Button("dismiss") { self.presentedAsModal = false }
         }
     }
