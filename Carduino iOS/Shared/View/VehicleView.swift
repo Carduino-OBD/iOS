@@ -11,18 +11,35 @@ import Combine
 struct VehicleView: View {
     @Binding var vehicle: Vehicle
     
-    @State private var fuelTankSize = ""
     var body: some View {
+        let fuelTankBinding = Binding<String>(
+            get: { self.vehicle.fuelTankSize.value.clean },
+            set: { fuelTankSizeString in
+                if fuelTankSizeString.hasSuffix(".") {
+                    return
+                }
+                guard let newFuelTankSize = Double(fuelTankSizeString) else { return }
+                
+                if Locale.current.usesMetricSystem {
+                    self.vehicle.fuelTankSize = Measurement(value: newFuelTankSize, unit: UnitVolume.liters)
+                } else {
+                    self.vehicle.fuelTankSize = Measurement(value: newFuelTankSize, unit: UnitVolume.gallons)
+                }
+                
+            }
+        )
+        
         Form {
-            Section {
-                TextField("Nickname", text: $vehicle.nickname )
-                TextField("Fuel Tank Size", text: $fuelTankSize)
+            Section(header: Text("Nickname")) {
+                TextField("Nickname", text: $vehicle.nickname)
+                    .autocapitalization(.words)
+            }
+            let fuelTankUnit =  Locale.current.usesMetricSystem ? "(Liters)" : "(Gallons)"
+            Section(header: Text("Fuel Tank Size \(fuelTankUnit)")) {
+                TextField("Fuel Tank Size \(fuelTankUnit)", text: fuelTankBinding)
                     .keyboardType(.decimalPad)
-                    .onReceive(Just(fuelTankSize)) { newValue in
-                        let filtered = newValue.filter { "0123456789.".contains($0) }
-                        self.fuelTankSize = filtered + " gallons"
-                    }
             }
         }.navigationTitle(vehicle.vin)
     }
+    
 }

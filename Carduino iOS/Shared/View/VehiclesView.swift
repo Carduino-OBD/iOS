@@ -10,6 +10,10 @@ import SwiftUI
 struct VehiclesView: View {
     
     @StateObject var vehicleObserver = VehicleObserver()
+    @State var firstAppear = true
+    
+    @State var saveError = false
+    @State var saveErrorMessage = ""
     var body: some View {
         Form {
             Section {
@@ -20,6 +24,23 @@ struct VehiclesView: View {
             }
         }
         .navigationBarTitle(Text("Vehicles"))
+        .onAppear {
+            if firstAppear {
+                firstAppear = false
+            } else {
+                saveError = false
+                saveErrorMessage = ""
+                do {
+                    try vehicleObserver.save()
+                } catch let error {
+                    saveError = true
+                    saveErrorMessage = error.localizedDescription
+                }
+            }
+        }
+        .alert(isPresented: $saveError) {
+            Alert(title: Text("Failed to save vehicle due to error \(saveErrorMessage)"))
+        }
     }
     
 }

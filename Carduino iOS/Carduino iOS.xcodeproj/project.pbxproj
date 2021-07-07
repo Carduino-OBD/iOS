@@ -24,6 +24,8 @@
 		A64BC9502695378500FF5E1E /* DriveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC94E2695378500FF5E1E /* DriveManager.swift */; };
 		A64BC95226953D9300FF5E1E /* OptionalBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC95126953D9300FF5E1E /* OptionalBinding.swift */; };
 		A64BC95326953D9300FF5E1E /* OptionalBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC95126953D9300FF5E1E /* OptionalBinding.swift */; };
+		A64BC955269661BE00FF5E1E /* FloatingPointClean.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC954269661BE00FF5E1E /* FloatingPointClean.swift */; };
+		A64BC956269661BE00FF5E1E /* FloatingPointClean.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BC954269661BE00FF5E1E /* FloatingPointClean.swift */; };
 		A65E9AA325903A31001CF607 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9AA225903A31001CF607 /* Tests_iOS.swift */; };
 		A65E9AAE25903A31001CF607 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9AAD25903A31001CF607 /* Tests_macOS.swift */; };
 		A65E9AB025903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A65E9A8425903A2F001CF607 /* Carduino_iOS.xcdatamodeld */; };
@@ -76,6 +78,7 @@
 		A64BC94B2695377D00FF5E1E /* VehicleObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleObserver.swift; sourceTree = "<group>"; };
 		A64BC94E2695378500FF5E1E /* DriveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveManager.swift; sourceTree = "<group>"; };
 		A64BC95126953D9300FF5E1E /* OptionalBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBinding.swift; sourceTree = "<group>"; };
+		A64BC954269661BE00FF5E1E /* FloatingPointClean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPointClean.swift; sourceTree = "<group>"; };
 		A65E9A8525903A2F001CF607 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		A65E9A8625903A2F001CF607 /* Carduino_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carduino_iOSApp.swift; sourceTree = "<group>"; };
 		A65E9A8725903A2F001CF607 /* CarduinoBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarduinoBaseView.swift; sourceTree = "<group>"; };
@@ -244,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				A64BC95126953D9300FF5E1E /* OptionalBinding.swift */,
+				A64BC954269661BE00FF5E1E /* FloatingPointClean.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -444,6 +448,7 @@
 				A6F0F79B265426C800124D58 /* DriveV1.swift in Sources */,
 				A64BC943269531FC00FF5E1E /* VehiclesView.swift in Sources */,
 				A65E9AB625903A31001CF607 /* Persistence.swift in Sources */,
+				A64BC955269661BE00FF5E1E /* FloatingPointClean.swift in Sources */,
 				A65E9AB025903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */,
 				A6F822462694AE3B00B799A7 /* DriveView.swift in Sources */,
 				A64B7EE726938CC500B6C2CD /* Drive.swift in Sources */,
@@ -468,6 +473,7 @@
 				A6F0F79C265426D600124D58 /* DriveV1.swift in Sources */,
 				A64BC944269531FC00FF5E1E /* VehiclesView.swift in Sources */,
 				A65E9AB725903A31001CF607 /* Persistence.swift in Sources */,
+				A64BC956269661BE00FF5E1E /* FloatingPointClean.swift in Sources */,
 				A65E9AB125903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */,
 				A6F822472694AE3B00B799A7 /* DriveView.swift in Sources */,
 				A64B7EE826938CC500B6C2CD /* Drive.swift in Sources */,
