@@ -9,6 +9,6 @@ import Foundation
 
 struct Vehicle: Codable {
     var vin: String
-    var nickname: String?
-    var fuelTankSize: Measurement<UnitVolume>?
+    var nickname: String
+    var fuelTankSize: Measurement<UnitVolume>
 }

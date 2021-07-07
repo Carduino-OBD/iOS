@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import MapKit
 
+
 struct DrivesView: View {
     
     var dateFormatter: DateFormatter = {
@@ -42,6 +43,24 @@ struct DrivesView: View {
 struct DriveRow: View {
     var drive: DriveV1
     
+    func lookUpCurrentLocation(location: CLLocation, completionHandler: @escaping (CLPlacemark?)
+                    -> Void ) {
+        let geocoder = CLGeocoder()
+            
+        // Look up the location and pass it to the completion handler
+        geocoder.reverseGeocodeLocation(location,
+                    completionHandler: { (placemarks, error) in
+            if error == nil {
+                let firstLocation = placemarks?[0]
+                completionHandler(firstLocation)
+            }
+            else {
+             // An error occurred during geocoding.
+                completionHandler(nil)
+            }
+        })
+    }
+    
     var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -69,18 +88,12 @@ struct DriveRow: View {
         return formatter
     }()
     
-    @State private var region = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(
-                latitude: 25.7617,
-                longitude: 80.1918
-            ),
-            span: MKCoordinateSpan(
-                latitudeDelta: 10,
-                longitudeDelta: 10
-            )
-        )
+    @State var startLocationName: String = "..."
+    @State var endLocationName: String = "..."
     
+
     var body: some View {
+        
         VStack{
             HStack {
                 HStack{
@@ -103,13 +116,31 @@ struct DriveRow: View {
             }
             MapView(route: drive.mkPolyline)
                 .frame(height: 200.0)
-            HStack {
-                Text("1501 Ashbury Lane")
+            VStack {
+                Text(startLocationName)
                     .font(.subheadline)
-                Image(systemName: "arrow.right.circle.fill")
+                    .onAppear {
+                        lookUpCurrentLocation(location: self.drive.points.first!) { [self] placemark in
+                            if let placemark = placemark?.name {
+                                DispatchQueue.main.async {
+                                    self.startLocationName = placemark
+                                }
+                            }
+                        }
+                    }
+                Image(systemName: "arrow.down.circle.fill")
                     .foregroundColor(.red)
-                Text("North Allegheny Senior High School")
+                Text(endLocationName)
                     .font(.subheadline)
+                    .onAppear {
+                        lookUpCurrentLocation(location: self.drive.points.last!) { [self] placemark in
+                            if let placemark = placemark?.name {
+                                DispatchQueue.main.async {
+                                    self.endLocationName = placemark
+                                }
+                            }
+                        }
+                    }
             }
             
         }

@@ -8,9 +8,13 @@
 import Foundation
 
 class VehicleObserver: ObservableObject {
-    @Published var vehicles: [Vehicle] = {
+    private static var vehiclesURL: URL = {
         var vehiclesURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents") ?? URL(string: "/")!
         vehiclesURL.appendPathComponent("vehicles.json")
+        return vehiclesURL
+    }()
+    
+    @Published var vehicles: [Vehicle] = {
         
         if !FileManager.default.fileExists(atPath: vehiclesURL.path) {
             do {
@@ -28,16 +32,12 @@ class VehicleObserver: ObservableObject {
             return [Vehicle]()
         }
         
-        // get only VINs from drives that we don't have a record for
-        var driveVins = DriveManager.getAllDriveVINs().filter { driveVin in
-            vehicles.filter({ $0.vin != driveVin }).count == 0
-        }
-        
-        for vin in driveVins {
-            vehicles.append(Vehicle(vin: vin))
-        }
-        
         return vehicles
     }()
+    
+    func save() throws {
+        let json = try JSONEncoder().encode(self.vehicles)
+        try json.write(to: VehicleObserver.vehiclesURL)
+    }
     
 }

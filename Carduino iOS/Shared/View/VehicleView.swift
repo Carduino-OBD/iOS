@@ -15,7 +15,7 @@ struct VehicleView: View {
     var body: some View {
         Form {
             Section {
-                TextField("Nickname", text: $vehicle.nickname ?? "")
+                TextField("Nickname", text: $vehicle.nickname )
                 TextField("Fuel Tank Size", text: $fuelTankSize)
                     .keyboardType(.decimalPad)
                     .onReceive(Just(fuelTankSize)) { newValue in

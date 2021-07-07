@@ -14,10 +14,10 @@ import MapKit
 struct DrivePointV1: Identifiable {
     var point: CLLocationCoordinate2D
     var date: Date
-    var gpsSpeed: UInt8
+    var gpsSpeed: Measurement<UnitSpeed>
     var heading: Int16
-    var altitude: Int16
-    var vehicleSpeed: UInt8
+    var altitude: Measurement<UnitLength>
+    var vehicleSpeed: Measurement<UnitSpeed>
     
     var id: Date {
         get {
@@ -29,11 +29,11 @@ struct DrivePointV1: Identifiable {
 class DriveV1: Drive, ObservableObject, Identifiable {
     var path = [DrivePointV1]()
     var vin: String
-    var startFuelTankLevel: UInt8
-    var endFuelTankLevel: UInt8
+    private var startFuelTankLevelPercent: UInt8
+    private var endFuelTankLevelPercent: UInt8
     
     var mkPolyline: MKPolyline?
-    private var points: [CLLocation]
+    var points: [CLLocation]
     
     var id: Date {
         get {
@@ -56,7 +56,7 @@ class DriveV1: Drive, ObservableObject, Identifiable {
         vinData.append(Data([0]))
         self.vin = String(cString: [UInt8](vinData))
         
-        self.startFuelTankLevel = data.subdata(in: 19..<20).withUnsafeBytes({ $0.load(as: UInt8.self) }).littleEndian
+        self.startFuelTankLevelPercent = data.subdata(in: 19..<20).withUnsafeBytes({ $0.load(as: UInt8.self) }).littleEndian
         
         let polylineSize = data.subdata(in: 20..<24).withUnsafeBytes({ $0.load(as: UInt32.self) }).littleEndian
         let driveFrameSize = data.subdata(in: 24..<28).withUnsafeBytes({ $0.load(as: UInt32.self) }).littleEndian
@@ -98,7 +98,14 @@ class DriveV1: Drive, ObservableObject, Identifiable {
             let altitude = data.subdata(in: (startOffset + 11)..<(startOffset + 13)).withUnsafeBytes({ $0.load(as: Int16.self) }).littleEndian
             let vehicleSpeed = data.subdata(in: (startOffset + 13)..<(startOffset + 14)).withUnsafeBytes({ $0.load(as: UInt8.self) }).littleEndian
             
-            let drivePoint = DrivePointV1(point: coordinate, date: Date(timeIntervalSince1970: TimeInterval(time)), gpsSpeed: gpsSpeed, heading: heading, altitude: altitude, vehicleSpeed: vehicleSpeed)
+            let drivePoint = DrivePointV1(point: coordinate,
+                                          date: Date(timeIntervalSince1970: TimeInterval(time)),
+                                          gpsSpeed: Measurement(value: Double(gpsSpeed), unit: .kilometersPerHour),
+                                          heading: heading,
+                                          altitude: Measurement(value: Double(altitude), unit: .meters),
+                                          vehicleSpeed: Measurement(value: Double(vehicleSpeed), unit: .kilometersPerHour)
+            
+            )
             self.path.append(drivePoint)
         }
         
@@ -109,10 +116,9 @@ class DriveV1: Drive, ObservableObject, Identifiable {
          ```
          */
         
-        self.endFuelTankLevel = data.subdata(in: Data.Index((28 + polylineSize + driveFrameSize))..<(Int(28 + polylineSize + driveFrameSize) + 1)).withUnsafeBytes({ $0.load(as: UInt8.self) }).littleEndian
+        self.endFuelTankLevelPercent = data.subdata(in: Data.Index((28 + polylineSize + driveFrameSize))..<(Int(28 + polylineSize + driveFrameSize) + 1)).withUnsafeBytes({ $0.load(as: UInt8.self) }).littleEndian
         
     }
-    var fuelUsed = Measurement(value: 0, unit: UnitVolume.gallons)
 
     var startCoordinateHumanReadableName: String?
     var endCoordinateHumanReadableName: String?
@@ -130,13 +136,6 @@ class DriveV1: Drive, ObservableObject, Identifiable {
         }
     }
     
-    private func getDistance(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> CLLocationDistance {
-        // By Aviel Gross
-        // https://stackoverflow.com/questions/11077425/finding-distance-between-cllocationcoordinate2d-points
-        let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
-        let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
-        return from.distance(from: to)
-    }
     
     var distance: Measurement<UnitLength> {
         get {
@@ -160,9 +159,19 @@ class DriveV1: Drive, ObservableObject, Identifiable {
         }
     }
     
-//    var fuelEfficiency: Measurement<UnitFuelEfficiency> {
-//        get {
-//            return Measurement(value: self.distance / self.fuelUsed, unit: UnitFuelEfficiency.milesPerGallon)
-//        }
-//    }
+    var fuelUsed: Measurement<UnitVolume> {
+        get {
+            return Measurement(value: 0, unit: .gallons)
+        }
+    }
+    
+    var fuelEfficiency: Measurement<UnitFuelEfficiency> {
+        get {
+            let distanceMiles = self.distance.converted(to: .miles).value
+            
+            
+            
+            return Measurement(value: distanceMiles, unit: UnitFuelEfficiency.milesPerGallon)
+        }
+    }
 }

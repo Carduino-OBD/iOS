@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Ampere",
-        "repositoryURL": "https://github.com/ole/Ampere.git",
-        "state": {
-          "branch": null,
-          "revision": "cfe9716452df88ec9657d1d2b3b0ed5335049611",
-          "version": "0.4.1"
-        }
-      },
-      {
         "package": "BlueCap",
         "repositoryURL": "https://github.com/jvigneshcs/BlueCap.git",
         "state": {

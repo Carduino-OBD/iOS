@@ -14,6 +14,9 @@ struct Carduino_iOSApp: App {
     
     @Environment(\.openURL) var openURL
     
+    @State var errorShown: Bool = false
+    @State var errorMessage: String = ""
+    
     let persistenceController = PersistenceController.shared
     
     var body: some Scene {
@@ -25,28 +28,18 @@ struct Carduino_iOSApp: App {
                         print("Invalid URL")
                         return
                     }
-                    
                     do {
-                        let _ = try DriveParser.getDrive(data: data) as! DriveV1
-                    } catch let error{
-                        print("Failed to parse drive due to error: \(error)")
-                        return
-                    }
-                    print("Got Drive")
-                    
-                    guard var icloudDestinationURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents") else {
-                        print("Could not get iCloud Drive, returning")
-                        return
-                    }
-                    icloudDestinationURL.appendPathComponent(url.lastPathComponent)
-                    do {
-                        try data.write(to: icloudDestinationURL)
+                        try DriveManager.importDrive(data: data, fileName: url.lastPathComponent)
                     } catch let error {
-                        print("Failed to write imported drive to iCloud due to error: \(error)")
+                        errorShown = true
+                        errorMessage = "Failed to import drive due to error \(error)"
                     }
                     
                 })
                 .accentColor(.red)
+                .alert(isPresented: $errorShown) {
+                    Alert(title: Text(errorMessage))
+                }
         }
     }
 }

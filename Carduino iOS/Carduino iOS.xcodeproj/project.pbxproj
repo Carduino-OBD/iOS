@@ -44,7 +44,6 @@
 		A6A59D9026866F0D003678B4 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = A6A59D8F26866F0D003678B4 /* Polyline */; };
 		A6F0F79B265426C800124D58 /* DriveV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0F79A265426C800124D58 /* DriveV1.swift */; };
 		A6F0F79C265426D600124D58 /* DriveV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0F79A265426C800124D58 /* DriveV1.swift */; };
-		A6F0F7A22654737600124D58 /* Ampere in Frameworks */ = {isa = PBXBuildFile; productRef = A6F0F7A12654737600124D58 /* Ampere */; };
 		A6F822462694AE3B00B799A7 /* DriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F822452694AE3B00B799A7 /* DriveView.swift */; };
 		A6F822472694AE3B00B799A7 /* DriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F822452694AE3B00B799A7 /* DriveView.swift */; };
 		A6F8224A269506E900B799A7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F82249269506E800B799A7 /* MapView.swift */; };
@@ -108,7 +107,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66D5088265DAEBD00DB2909 /* CloudKit.framework in Frameworks */,
-				A6F0F7A22654737600124D58 /* Ampere in Frameworks */,
 				A61B56E526837669000F77B5 /* BlueCap in Frameworks */,
 				A6A59D9026866F0D003678B4 /* Polyline in Frameworks */,
 			);
@@ -288,7 +286,6 @@
 			);
 			name = "Carduino iOS (iOS)";
 			packageProductDependencies = (
-				A6F0F7A12654737600124D58 /* Ampere */,
 				A61B56E426837669000F77B5 /* BlueCap */,
 				A6A59D8F26866F0D003678B4 /* Polyline */,
 			);
@@ -384,7 +381,6 @@
 			);
 			mainGroup = A65E9A7E25903A2E001CF607;
 			packageReferences = (
-				A6F0F7A02654737600124D58 /* XCRemoteSwiftPackageReference "Ampere" */,
 				A61B56E326837669000F77B5 /* XCRemoteSwiftPackageReference "BlueCap" */,
 				A6A59D8E26866F0D003678B4 /* XCRemoteSwiftPackageReference "Polyline" */,
 			);
@@ -878,14 +874,6 @@
 				minimumVersion = 5.0.2;
 			};
 		};
-		A6F0F7A02654737600124D58 /* XCRemoteSwiftPackageReference "Ampere" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ole/Ampere.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -898,11 +886,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A6A59D8E26866F0D003678B4 /* XCRemoteSwiftPackageReference "Polyline" */;
 			productName = Polyline;
-		};
-		A6F0F7A12654737600124D58 /* Ampere */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A6F0F7A02654737600124D58 /* XCRemoteSwiftPackageReference "Ampere" */;
-			productName = Ampere;
 		};
 /* End XCSwiftPackageProductDependency section */
 
