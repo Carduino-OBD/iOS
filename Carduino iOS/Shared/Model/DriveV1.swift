@@ -26,7 +26,8 @@ struct DrivePointV1: Identifiable {
     }
 }
 
-class DriveV1: Drive, ObservableObject, Identifiable {
+class DriveV1: Drive, ObservableObject, Identifiable, Hashable, Equatable {
+    
     var path = [DrivePointV1]()
     var vin: String
     private var startFuelTankLevelPercent: UInt8
@@ -118,6 +119,14 @@ class DriveV1: Drive, ObservableObject, Identifiable {
         
         self.endFuelTankLevelPercent = data.subdata(in: Data.Index((28 + polylineSize + driveFrameSize))..<(Int(28 + polylineSize + driveFrameSize) + 1)).withUnsafeBytes({ $0.load(as: UInt8.self) }).littleEndian
         
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.path.first!.date)
+    }
+    
+    static func == (lhs: DriveV1, rhs: DriveV1) -> Bool {
+        return lhs.path.first!.date == rhs.path.first!.date
     }
 
     var startCoordinateHumanReadableName: String?

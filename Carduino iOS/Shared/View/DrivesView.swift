@@ -23,18 +23,25 @@ struct DrivesView: View {
     var body: some View {
         let dict = DriveManager.getDateMappedDrives()
         
-        Form {
-            ForEach(Array(dict.keys.sorted(by: >)), id: \.self) { date in
-                let headerText = dateFormatter.string(from: date)
-                let drives = dict[date]!
-                Section(header: Text(headerText)) {
-                    ForEach(drives) { drive in
-                        DriveRow(drive: drive)
+        List {
+            LazyVStack {
+                ForEach(Array(dict.keys.sorted(by: >)), id: \.self) { date in
+                    let headerText = dateFormatter.string(from: date)
+                    let drives = dict[date]!
+                    GroupBox(label: Text(headerText)) {
+                        LazyVStack{
+                            ForEach(Array(drives.enumerated()), id: \.element) { (idx, drive) in
+                                DriveRow(drive: drive)
+                                if idx != drives.count - 1 {
+                                    Divider()
+                                }
+                            }
+                        }
                     }
                 }
             }
-            
         }
+        
         .navigationBarTitle(Text("Drives"))
         .accentColor(.orange)
     }
