@@ -24,7 +24,7 @@ struct DrivesView: View {
         let dict = DriveManager.getDateMappedDrives()
         
         Form {
-            ForEach(Array(dict.keys), id: \.self) { date in
+            ForEach(Array(dict.keys.sorted(by: >)), id: \.self) { date in
                 let headerText = dateFormatter.string(from: date)
                 let drives = dict[date]!
                 Section(header: Text(headerText)) {
