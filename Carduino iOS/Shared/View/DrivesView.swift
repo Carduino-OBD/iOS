@@ -49,24 +49,7 @@ struct DrivesView: View {
 
 struct DriveRow: View {
     var drive: DriveV1
-    
-    func lookUpCurrentLocation(location: CLLocation, completionHandler: @escaping (CLPlacemark?)
-                    -> Void ) {
-        let geocoder = CLGeocoder()
-            
-        // Look up the location and pass it to the completion handler
-        geocoder.reverseGeocodeLocation(location,
-                    completionHandler: { (placemarks, error) in
-            if error == nil {
-                let firstLocation = placemarks?[0]
-                completionHandler(firstLocation)
-            }
-            else {
-             // An error occurred during geocoding.
-                completionHandler(nil)
-            }
-        })
-    }
+
     
     var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -127,8 +110,8 @@ struct DriveRow: View {
                 Text(startLocationName)
                     .font(.subheadline)
                     .onAppear {
-                        lookUpCurrentLocation(location: self.drive.points.first!) { [self] placemark in
-                            if let placemark = placemark?.name {
+                        HumanReadableLocationManager.lookUpCurrentLocation(location: self.drive.points.first!) { [self] placemark in
+                            if let placemark = placemark {
                                 DispatchQueue.main.async {
                                     self.startLocationName = placemark
                                 }
@@ -140,8 +123,8 @@ struct DriveRow: View {
                 Text(endLocationName)
                     .font(.subheadline)
                     .onAppear {
-                        lookUpCurrentLocation(location: self.drive.points.last!) { [self] placemark in
-                            if let placemark = placemark?.name {
+                        HumanReadableLocationManager.lookUpCurrentLocation(location: self.drive.points.last!) { [self] placemark in
+                            if let placemark = placemark {
                                 DispatchQueue.main.async {
                                     self.endLocationName = placemark
                                 }

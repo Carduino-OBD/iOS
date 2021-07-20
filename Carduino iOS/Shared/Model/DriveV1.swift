@@ -168,8 +168,13 @@ class DriveV1: Drive, ObservableObject, Identifiable, Hashable, Equatable {
         }
     }
     
-    var fuelUsed: Measurement<UnitVolume> {
+    
+    /// Returns the fuel used during this trip. Due to the lack of precision in OBD II, returns a possible upper and lower bound
+    var fuelUsed: /*Range<*/Measurement<UnitVolume>/*>*/ {
         get {
+            let fuelTankSize = VehicleObserver().vehicles.filter({ $0.vin == self.vin }).first!.fuelTankSize
+            //let upperBound = fuelTankSize * self.startFuelTankLevelPercent - fuelTankSize * self.endFuelTankLevelPercent
+            //return Measurement(value: 0, unit: .gallons)...Measurement(value: 0, unit: .gallons)
             return Measurement(value: 0, unit: .gallons)
         }
     }

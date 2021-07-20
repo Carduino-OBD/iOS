@@ -44,6 +44,9 @@
 		A66D508A265DAFCB00DB2909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D5089265DAFCB00DB2909 /* AppDelegate.swift */; };
 		A66D508B265DAFCB00DB2909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D5089265DAFCB00DB2909 /* AppDelegate.swift */; };
 		A6A59D9026866F0D003678B4 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = A6A59D8F26866F0D003678B4 /* Polyline */; };
+		A6A7F20626A754A900E71EF4 /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = A6A7F20526A754A900E71EF4 /* Cache */; };
+		A6A7F20826A756AF00E71EF4 /* HumanReadableLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F20726A756AF00E71EF4 /* HumanReadableLocationManager.swift */; };
+		A6A7F20926A756AF00E71EF4 /* HumanReadableLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F20726A756AF00E71EF4 /* HumanReadableLocationManager.swift */; };
 		A6F0F79B265426C800124D58 /* DriveV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0F79A265426C800124D58 /* DriveV1.swift */; };
 		A6F0F79C265426D600124D58 /* DriveV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0F79A265426C800124D58 /* DriveV1.swift */; };
 		A6F822462694AE3B00B799A7 /* DriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F822452694AE3B00B799A7 /* DriveView.swift */; };
@@ -99,6 +102,7 @@
 		A66D5081265DAD4100DB2909 /* Carduino iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Carduino iOS.entitlements"; sourceTree = "<group>"; };
 		A66D5087265DAEBD00DB2909 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		A66D5089265DAFCB00DB2909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A6A7F20726A756AF00E71EF4 /* HumanReadableLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanReadableLocationManager.swift; sourceTree = "<group>"; };
 		A6F0F79A265426C800124D58 /* DriveV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveV1.swift; sourceTree = "<group>"; };
 		A6F822452694AE3B00B799A7 /* DriveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveView.swift; sourceTree = "<group>"; };
 		A6F82249269506E800B799A7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66D5088265DAEBD00DB2909 /* CloudKit.framework in Frameworks */,
+				A6A7F20626A754A900E71EF4 /* Cache in Frameworks */,
 				A61B56E526837669000F77B5 /* BlueCap in Frameworks */,
 				A6A59D9026866F0D003678B4 /* Polyline in Frameworks */,
 			);
@@ -221,6 +226,7 @@
 				A61B56DA268223DC000F77B5 /* BluetoothManager.swift */,
 				A64BC94B2695377D00FF5E1E /* VehicleObserver.swift */,
 				A64BC94E2695378500FF5E1E /* DriveManager.swift */,
+				A6A7F20726A756AF00E71EF4 /* HumanReadableLocationManager.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 			packageProductDependencies = (
 				A61B56E426837669000F77B5 /* BlueCap */,
 				A6A59D8F26866F0D003678B4 /* Polyline */,
+				A6A7F20526A754A900E71EF4 /* Cache */,
 			);
 			productName = "Carduino iOS (iOS)";
 			productReference = A65E9A8E25903A31001CF607 /* Carduino iOS.app */;
@@ -387,6 +394,7 @@
 			packageReferences = (
 				A61B56E326837669000F77B5 /* XCRemoteSwiftPackageReference "BlueCap" */,
 				A6A59D8E26866F0D003678B4 /* XCRemoteSwiftPackageReference "Polyline" */,
+				A6A7F20426A754A900E71EF4 /* XCRemoteSwiftPackageReference "Cache" */,
 			);
 			productRefGroup = A65E9A8F25903A31001CF607 /* Products */;
 			projectDirPath = "";
@@ -451,6 +459,7 @@
 				A64BC955269661BE00FF5E1E /* FloatingPointClean.swift in Sources */,
 				A65E9AB025903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */,
 				A6F822462694AE3B00B799A7 /* DriveView.swift in Sources */,
+				A6A7F20826A756AF00E71EF4 /* HumanReadableLocationManager.swift in Sources */,
 				A64B7EE726938CC500B6C2CD /* Drive.swift in Sources */,
 				A65E9AB425903A31001CF607 /* CarduinoBaseView.swift in Sources */,
 				A61B56DB268223DC000F77B5 /* BluetoothManager.swift in Sources */,
@@ -476,6 +485,7 @@
 				A64BC956269661BE00FF5E1E /* FloatingPointClean.swift in Sources */,
 				A65E9AB125903A31001CF607 /* Carduino_iOS.xcdatamodeld in Sources */,
 				A6F822472694AE3B00B799A7 /* DriveView.swift in Sources */,
+				A6A7F20926A756AF00E71EF4 /* HumanReadableLocationManager.swift in Sources */,
 				A64B7EE826938CC500B6C2CD /* Drive.swift in Sources */,
 				A65E9AB525903A31001CF607 /* CarduinoBaseView.swift in Sources */,
 				A61B56DC268223DC000F77B5 /* BluetoothManager.swift in Sources */,
@@ -880,6 +890,14 @@
 				minimumVersion = 5.0.2;
 			};
 		};
+		A6A7F20426A754A900E71EF4 /* XCRemoteSwiftPackageReference "Cache" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hyperoslo/Cache.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -892,6 +910,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A6A59D8E26866F0D003678B4 /* XCRemoteSwiftPackageReference "Polyline" */;
 			productName = Polyline;
+		};
+		A6A7F20526A754A900E71EF4 /* Cache */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6A7F20426A754A900E71EF4 /* XCRemoteSwiftPackageReference "Cache" */;
+			productName = Cache;
 		};
 /* End XCSwiftPackageProductDependency section */
 
