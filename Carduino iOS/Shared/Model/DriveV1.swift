@@ -83,6 +83,10 @@ class DriveV1: Drive, ObservableObject, Identifiable, Hashable, Equatable {
             throw DriveParseError.polylineInvalid
         }
         
+        guard polylineCoordinates.count >= 2 else {
+            throw DriveParseError.needsAtLeast2Points
+        }
+        
         self.mkPolyline = mkPolyline
         self.points = polyline.locations!
         
@@ -110,6 +114,7 @@ class DriveV1: Drive, ObservableObject, Identifiable, Hashable, Equatable {
             self.path.append(drivePoint)
         }
         
+        
         /*
          ```
          |-----GPS Time-----|-----GPS Speed-----|-----Heading-----|-----Altitude-----|-----Vehicle Speed-----|
@@ -128,20 +133,17 @@ class DriveV1: Drive, ObservableObject, Identifiable, Hashable, Equatable {
     static func == (lhs: DriveV1, rhs: DriveV1) -> Bool {
         return lhs.path.first!.date == rhs.path.first!.date
     }
-
-    var startCoordinateHumanReadableName: String?
-    var endCoordinateHumanReadableName: String?
     
     
-    var startPoint: DrivePointV1? {
+    var startPoint: DrivePointV1 {
         get {
-            return self.path.first
+            return self.path.first!
         }
     }
     
-    var endPoint: DrivePointV1? {
+    var endPoint: DrivePointV1 {
         get {
-            return self.path.last
+            return self.path.last!
         }
     }
     
@@ -170,12 +172,22 @@ class DriveV1: Drive, ObservableObject, Identifiable, Hashable, Equatable {
     
     
     /// Returns the fuel used during this trip. Due to the lack of precision in OBD II, returns a possible upper and lower bound
-    var fuelUsed: /*Range<*/Measurement<UnitVolume>/*>*/ {
+    var fuelUsed: ClosedRange<Measurement<UnitVolume>> {
         get {
-            let fuelTankSize = VehicleObserver().vehicles.filter({ $0.vin == self.vin }).first!.fuelTankSize
-            //let upperBound = fuelTankSize * self.startFuelTankLevelPercent - fuelTankSize * self.endFuelTankLevelPercent
-            //return Measurement(value: 0, unit: .gallons)...Measurement(value: 0, unit: .gallons)
-            return Measurement(value: 0, unit: .gallons)
+            let fuelTankSizeGallons = VehicleObserver().vehicles.filter({ $0.vin == self.vin }).first!.fuelTankSize.converted(to: .gallons).value
+            
+            let startFuelTankLevelPercentUpper = Double(self.startFuelTankLevelPercent + 1) / 255.0
+            let endFuelTankLevelPercentUpper = Double(self.endFuelTankLevelPercent - 1) / 255.0
+            
+            let startFuelTankLevelPercentLower = Double(self.startFuelTankLevelPercent - 1) / 255.0
+            let endFuelTankLevelPercentLower = Double(self.endFuelTankLevelPercent + 1) / 255.0
+            
+            
+            let upperBoundGallonsUsed = fuelTankSizeGallons * startFuelTankLevelPercentUpper - fuelTankSizeGallons * endFuelTankLevelPercentUpper
+            let lowerBoundGallonsUsed = fuelTankSizeGallons * startFuelTankLevelPercentLower - fuelTankSizeGallons * endFuelTankLevelPercentLower
+            
+            
+            return Measurement(value: lowerBoundGallonsUsed, unit: .gallons)...Measurement(value: upperBoundGallonsUsed, unit: .gallons)
         }
     }
     
@@ -183,9 +195,15 @@ class DriveV1: Drive, ObservableObject, Identifiable, Hashable, Equatable {
         get {
             let distanceMiles = self.distance.converted(to: .miles).value
             
+            let upperBoundGallonsUsed = self.fuelUsed.lowerBound.converted(to: .gallons).value
+            let lowerBoundGallonsUsed = self.fuelUsed.upperBound.converted(to: .gallons).value
+
+            let upperBoundMPG = distanceMiles / upperBoundGallonsUsed
+            let lowerBoundMPG = distanceMiles / lowerBoundGallonsUsed
             
-            
-            return Measurement(value: distanceMiles, unit: UnitFuelEfficiency.milesPerGallon)
+            let averageMPG = (upperBoundMPG + lowerBoundMPG) / 2
+        
+            return Measurement(value: averageMPG, unit: UnitFuelEfficiency.milesPerGallon)
         }
     }
 }

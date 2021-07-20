@@ -12,7 +12,8 @@ enum DriveParseError: Error {
          invalidDriveFrameSize,
          mismatchedPolylineFrameCount,
          polylineInvalid,
-         packetSizeInvalid
+         packetSizeInvalid,
+         needsAtLeast2Points
 }
 
 protocol Drive {

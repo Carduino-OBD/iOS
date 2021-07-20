@@ -85,7 +85,7 @@ struct DriveRow: View {
     var body: some View {
         
         VStack{
-            HStack {
+            VStack {
                 HStack{
                     let startTime = timeFormatter.string(from: drive.path.first!.date)
                     let endTime = timeFormatter.string(from: drive.path.last!.date)
@@ -101,6 +101,8 @@ struct DriveRow: View {
                     Text(measurementFormatter.string(from: drive.distance))
                         .font(.subheadline)
                     Text(relativeDateFormatter.localizedString(fromTimeInterval: drive.duration))
+                        .font(.subheadline)
+                    Text(measurementFormatter.string(from: drive.fuelEfficiency))
                         .font(.subheadline)
                 }.frame(maxWidth: .infinity)
             }
