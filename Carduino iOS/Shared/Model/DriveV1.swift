@@ -46,6 +46,10 @@ class DriveV1: Drive, ObservableObject, Identifiable, Hashable, Equatable {
     private static let DRIVE_FRAME_SIZE:UInt32 = 14
     private static let FOOTER_SIZE:UInt32 = 1
     
+    deinit {
+        print("Deinit")
+    }
+    
     
     init(data: Data) throws {
         let versionNumber = data.subdata(in: 0..<2).withUnsafeBytes({ $0.load(as: UInt16.self) }).littleEndian

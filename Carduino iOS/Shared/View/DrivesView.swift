@@ -19,6 +19,10 @@ struct DrivesView: View {
         return dateFormatter
     }()
     
+    @State private var showingDriveSheet = false
+    @State private var shownDrive: DriveV1!
+    
+
     
     var body: some View {
         let dict = DriveManager.getDateMappedDrives()
@@ -32,6 +36,11 @@ struct DrivesView: View {
                         LazyVStack{
                             ForEach(Array(drives.enumerated()), id: \.element) { (idx, drive) in
                                 DriveRow(drive: drive)
+                                    .contentShape(Rectangle())
+                                    .onTapGesture {
+                                        self.shownDrive = drive
+                                        self.showingDriveSheet.toggle()
+                                    }
                                 if idx != drives.count - 1 {
                                     Divider()
                                 }
@@ -41,9 +50,14 @@ struct DrivesView: View {
                 }
             }
         }
-        
         .navigationBarTitle(Text("Drives"))
         .accentColor(.orange)
+        .sheet(item: $shownDrive, content: { drive in
+            DriveView(presentedAsModal: $showingDriveSheet, drive: drive)
+                .onDisappear {
+                    self.shownDrive = nil
+                }
+        })
     }
 }
 

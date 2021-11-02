@@ -11,12 +11,17 @@ import Foundation
 class DriveManager {
     static func getDrives() -> [DriveV1] {
         let icloudDestinationURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents") ?? URL(string: "/")!
-        var drives = try? FileManager.default.contentsOfDirectory(at: icloudDestinationURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+        var driveFiles = try? FileManager.default.contentsOfDirectory(at: icloudDestinationURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
             .filter({ $0.pathExtension == "cdu" }) // We only want CDU documents
-            .map({ try? Data(contentsOf: $0) }) // Attempt to read in the data
-            .compactMap { $0 } // Remove any failed attempts at reading
-            .map({ try? DriveV1(data: $0) }) // Convert the data to drives
-            .compactMap { $0 } // Remove any failed attempts at parsing
+        
+        driveFiles?.forEach({ driveFile in
+            try? FileManager.default.startDownloadingUbiquitousItem(at: driveFile)
+        })
+        
+        var drives = driveFiles?.map({ try? Data(contentsOf: $0) }) // Attempt to read in the data
+                                .compactMap { $0 } // Remove any failed attempts at reading
+                                .map({ try? DriveV1(data: $0) }) // Convert the data to drives
+                                .compactMap { $0 } // Remove any failed attempts at parsing
         
         if drives == nil {
             print("Warning: unable to retrieve drives")
